@@ -35,6 +35,9 @@ showData();
 
 inputBox.addEventListener('input', function() {
   const parentRow = this.closest('.row'); // Get the closest parent .row element
+  const specificLength = 10;
+  if (this.value.length === specificLength) 
+  { alert('Write your Task within ' + specificLength +' Characters(White Spaces Included)'); }
   if (this.checkValidity()) {
       parentRow.classList.add('valid');
       parentRow.classList.remove('invalid');
