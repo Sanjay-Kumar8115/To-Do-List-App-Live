@@ -173,7 +173,7 @@ ul li {
     cursor: pointer;
     position: relative;
     word-wrap: break-word; /* Ensure tasks wrap inside the container */
-    max-width: calc(100% - 50px); /* Prevent tasks from exceeding the container width and getting hidden behind the delete button */
+    max-width: calc(100% - 10px); /* Prevent tasks from exceeding the container width and getting hidden behind the delete button */
     padding-right: 45px; /* Add gap between text and delete button */
 }
 
@@ -229,7 +229,7 @@ ul li span:hover {
 
     .row {
         flex-direction: column;
-        padding-left: 10px;
+        padding-left: 100px;
     }
 
     button {
