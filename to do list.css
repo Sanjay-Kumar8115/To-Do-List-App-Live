@@ -142,6 +142,7 @@ ul li span:hover{
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
+    border: 2px solid rgb(30, 8, 8); /* Default border color */
 }
 
 input {
@@ -171,6 +172,9 @@ ul li {
     user-select: none;
     cursor: pointer;
     position: relative;
+    word-wrap: break-word; /* Ensure tasks wrap inside the container */
+    max-width: calc(100% - 50px); /* Prevent tasks from exceeding the container width and getting hidden behind the delete button */
+    padding-right: 45px; /* Add gap between text and delete button */
 }
 
 ul li::before {
@@ -239,3 +243,17 @@ ul li span:hover {
         margin-bottom: 10px;
     }
 }
+
+/* Minimum Text Limit */
+input::placeholder {
+    color: #999;
+}
+
+.row.valid {
+    border: 2px solid green; /* Border color for valid input */
+}
+
+.row.invalid {
+    border: 2px solid red; /* Border color for invalid input */
+}
+

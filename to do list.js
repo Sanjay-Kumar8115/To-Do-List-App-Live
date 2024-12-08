@@ -32,3 +32,14 @@ function showData(){
     listContainer.innerHTML=localStorage.getItem('data');
 }
 showData();
+
+inputBox.addEventListener('input', function() {
+  const parentRow = this.closest('.row'); // Get the closest parent .row element
+  if (this.checkValidity()) {
+      parentRow.classList.add('valid');
+      parentRow.classList.remove('invalid');
+  } else {
+      parentRow.classList.add('invalid');
+      parentRow.classList.remove('valid');
+  }
+});
